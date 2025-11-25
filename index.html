@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>QuoteWave — Quote Generator</title>
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Allura&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="app-header">
+      <h1><span class="logo">“</span> QuoteWave</h1>
+
+      <div class="controls">
+        <button id="themeToggle" class="icon-btn" title="Toggle theme"><i class="fa-regular fa-moon"></i></button>
+        <button id="viewSavedBtn" class="btn small">Favorites <i class="fa-solid fa-bookmark"></i></button>
+      </div>
+    </header>
+
+    <section class="card quote-card" aria-live="polite">
+      <div class="meta">
+        <h2 class="card-title">Quote of the moment</h2>
+        <div class="tag-row" id="tagRow" role="tablist" aria-label="Quote categories">
+          <button class="tag active" data-tag="">All</button>
+          <button class="tag" data-tag="life">Life</button>
+          <button class="tag" data-tag="love">Love</button>
+          <button class="tag" data-tag="wisdom">Wisdom</button>
+          <button class="tag" data-tag="technology">Tech</button>
+          <button class="tag" data-tag="famous-quotes">Famous</button>
+          <button class="tag" data-tag="inspirational">Inspire</button>
+        </div>
+      </div>
+
+      <div class="quote-area">
+        <div id="loader" class="loader" aria-hidden="true"></div>
+
+        <blockquote id="quote" class="quote fade">Loading...</blockquote>
+        <cite id="author" class="author">— Unknown</cite>
+      </div>
+
+      <div class="actions">
+        <div class="left-actions">
+          <button id="newQuoteBtn" class="btn">New Quote</button>
+          <button id="copyBtn" class="btn outline"><i class="fa-regular fa-copy"></i> Copy</button>
+          <button id="speakBtn" class="btn outline"><i class="fa-solid fa-volume-high"></i> Read</button>
+        </div>
+
+        <div class="right-actions">
+          <button id="saveBtn" class="btn primary"><i class="fa-solid fa-bookmark"></i> Save</button>
+
+          <div class="share-row">
+            <button id="tweetBtn" class="icon-btn" title="Tweet"><i class="fa-brands fa-twitter"></i></button>
+            <button id="whatsappBtn" class="icon-btn" title="Share to WhatsApp"><i class="fa-brands fa-whatsapp"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="status" id="status" role="status" aria-live="polite"></div>
+    </section>
+
+    <footer class="app-footer">
+      <small>Made with ❤️ by Deepali</small>
+    </footer>
+  </main>
+
+  <!-- Saved Favorites Modal -->
+  <div id="savedModal" class="modal" aria-hidden="true" role="dialog" aria-label="Saved quotes">
+    <div class="modal-panel">
+      <header class="modal-header">
+        <h3>Saved Quotes</h3>
+        <div>
+          <button id="clearSavedBtn" class="btn small danger">Clear</button>
+          <button id="closeSavedBtn" class="icon-btn" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+      </header>
+      <div class="modal-body" id="savedList">
+        <!-- saved items appear here -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>
