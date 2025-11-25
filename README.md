@@ -12,16 +12,16 @@ QuoteWave fetches inspirational quotes using public APIs, supports dark mode, ca
 ## 📸 Screenshots
 
 ### 🌞 Light Mode  
-<img src="assets/screenshots/LightMode.png" width="700">
+<img src="./assets/screenshots/LightMode.png" width="700">
 
 ### 🌙 Dark Mode  
-<img src="assets/screenshots/DarkMode.png" width="700">
+<img src="./assets/screenshots/DarkMode.png" width="700">
 
 ### ⭐ QuoteWave - Favorites Modal  
-<img src="assets/screenshots/FavoritesModal.png" width="700">
+<img src="./assets/screenshots/FavoritesModal.png" width="700">
 
 ### 🎯 Quote Loaded Example  
-<img src="assets/screenshots/LightQuote.png" width="700">
+<img src="./assets/screenshots/LightQuote.png" width="700">
 
 ---
 
